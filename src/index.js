@@ -12,7 +12,7 @@ import "./index.css";
 
 WebFont.load({
   google: {
-    families: ["Montserrat", "sans-serif"],
+    families: ["FjallaOne", "sans-serif"],
   },
 });
 
