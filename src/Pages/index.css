@@ -1,10 +1,44 @@
 .Home {
     font-size: 30px;
     height: 100%;
-    position: absolute;
-    left: 7%;
 
 
 
 
+}
+
+/* .CV {
+    width: 1540px;
+    height: 1500px;
+    background-color: gray;
+} */
+
+.CV__content {
+    margin: 100px 100px 100px 100px;
+    width: 84%;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(110 179 255);
+    border-radius: 25px;
+
+    box-shadow: 1px -1px 25px 7px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.CV__content__title {
+    font-size: 50px;
+    border-bottom: 3px solid white;
+    padding: 40px 0px 40px 0px;
+    margin: 0;
+    color: white
+}
+
+.CV__title {
+    font-size: 40px;
+    text-decoration: underline;
+    text-underline-offset: 12px;
+    margin: 0;
+    padding: 40px 0px 40px 0px;
+    color: white
 }

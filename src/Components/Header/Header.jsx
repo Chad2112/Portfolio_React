@@ -1,4 +1,5 @@
-import headerImg from "../../Assets/header.jpg";
+import headerImg from "../../Assets/header5.jpg";
+import CvImg from "../../Assets/CvBanner.jpg";
 import ProfileImg from "../../Assets/Profile.jpg";
 import { useState, useEffect } from "react";
 import "./Header.css";
@@ -16,22 +17,18 @@ function Header() {
     }
   }, [location]);
   return CVActive ? (
-    <div className="header">
+    <header className="header">
       <h1 className="header__name">Andersson Chad</h1>
-      <img className="header__img" src={headerImg} alt="Banner" />
+      <img className="header__img" style={{ objectPosition: "center" }} src={CvImg} alt="Banner" />
 
       <div className="header__content__profile">
         <img className="header__profile" src={ProfileImg} alt="Profile"></img>
       </div>
-    </div>
+    </header>
   ) : (
-    <div className="header">
+    <header className="header__home">
       <img className="header__img" src={headerImg} alt="Banner" />
-
-      <div className="header__content__profile">
-        <img className="header__profile" src={ProfileImg} alt="Profile"></img>
-      </div>
-    </div>
+    </header>
   );
 }
 
