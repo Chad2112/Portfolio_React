@@ -6,15 +6,9 @@ import Home from "./Pages/Home";
 import Header from "./Components/Header/Header";
 import CV from "./Pages/CV";
 import Projets from "./Pages/Projets";
+import Contact from "./Pages/Contact";
 import SlideMenu from "./Components/SlideMenu/SlideMenu";
-import WebFont from "webfontloader";
 import "./index.css";
-
-WebFont.load({
-  google: {
-    families: ["FjallaOne", "sans-serif"],
-  },
-});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -26,7 +20,7 @@ root.render(
         <Route path="/" element={<Home />}></Route>
         <Route path="/Projets" element={<Projets />}></Route>
         <Route path="/CV" element={<CV />}></Route>
-        {/* <Route path="/Contact" element={<Contact />}></Route> */}
+        <Route path="/Contact" element={<Contact />}></Route>
       </Routes>
     </Router>
   </React.StrictMode>

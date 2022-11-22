@@ -99,12 +99,13 @@
     position: absolute;
     top: 85%;
     right: 16%;
+    color: white;
 }
 
 
 .slideMenu__content--home {
     position: absolute;
-    top: 15%;
+    top: 11%;
     font-size: 45px;
     height: 760px;
     margin: 0px 100px;
@@ -121,7 +122,6 @@
     font-size: 60px;
     font-weight: bolder;
     margin-left: 100px;
-    height: 20%;
     letter-spacing: 10px;
 
 }
