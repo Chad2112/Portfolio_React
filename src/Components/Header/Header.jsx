@@ -7,34 +7,39 @@ import { useState, useEffect } from "react";
 import "./Header.css";
 import { useLocation } from "react-router-dom";
 function Header() {
-  const [HomeActive, setHome] = useState(false);
+  const [CVActive, setCV] = useState(false);
   const [contactActive, setContact] = useState(false);
   const [projetsActive, setProjets] = useState(false);
 
   const location = useLocation().pathname;
 
   useEffect(() => {
-    if (location === "/Portfolio_React") {
-      setHome(true);
+    if (location === "/Portfolio_React/CV") {
+      setCV(true);
       setContact(false);
       setProjets(false);
     } else if (location === "/Portfolio_React/Contact") {
       setContact(true);
-      setHome(false);
+      setCV(false);
       setProjets(false);
     } else if (location === "/Portfolio_React/Projets") {
       setProjets(true);
-      setHome(false);
+      setCV(false);
       setContact(false);
     } else {
-      setHome(false);
+      setCV(false);
       setContact(false);
       setProjets(false);
     }
   }, [location]);
-  return HomeActive ? (
-    <header className="header__home">
-      <img className="header__img" src={headerImg} alt="Banner" />
+  return CVActive ? (
+    <header className="header">
+      <h1 className="header__name">Andersson Chad</h1>
+      <img className="header__img" style={{ objectPosition: "center" }} src={CvImg} alt="Banner" />
+
+      <div className="header__content__profile">
+        <img className="header__profile" src={ProfileImg} alt="Profile"></img>
+      </div>
     </header>
   ) : contactActive ? (
     <header className="header">
@@ -47,13 +52,8 @@ function Header() {
       <img className="header__img" style={{ objectPosition: "center" }} src={projetsImg} alt="Banner" />
     </header>
   ) : (
-    <header className="header">
-      <h1 className="header__name">Andersson Chad</h1>
-      <img className="header__img" style={{ objectPosition: "center" }} src={CvImg} alt="Banner" />
-
-      <div className="header__content__profile">
-        <img className="header__profile" src={ProfileImg} alt="Profile"></img>
-      </div>
+    <header className="header__home">
+      <img className="header__img" src={headerImg} alt="Banner" />
     </header>
   );
 }
