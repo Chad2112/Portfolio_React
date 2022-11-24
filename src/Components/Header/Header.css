@@ -70,3 +70,13 @@
     object-fit: cover;
     border-radius: 50%;
 }
+
+.header__name--contact {
+    position: absolute;
+    right: 38%;
+    color: white;
+    top: 40%;
+    font-size: 59px;
+    /* background-color: white; */
+    z-index: 1000;
+}

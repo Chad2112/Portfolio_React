@@ -17,7 +17,7 @@ root.render(
       <SlideMenu />
       <Header></Header>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/Portfolio_React" element={<Home />}></Route>
         <Route path="/Projets" element={<Projets />}></Route>
         <Route path="/CV" element={<CV />}></Route>
         <Route path="/Contact" element={<Contact />}></Route>

@@ -1,0 +1,33 @@
+.contact__form {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 600px;
+    width: 50%;
+    align-items: center;
+    background-color: rgb(110 179 255);
+    border-radius: 25px;
+    padding: 40px 10px 40px 10px;
+}
+
+.contact__form input,
+textarea {
+    background-color: rgb(21 42 92 / 59%);
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    border-radius: 25px;
+    width: 75%;
+    padding: 30px;
+}
+
+.contact__form__btn {
+    width: 441px;
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(21 42 92 / 59%);
+    height: 10%;
+    border-radius: 25px;
+    font-size: 20px;
+}

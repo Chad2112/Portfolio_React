@@ -1,10 +1,14 @@
 import "./index.css";
+import Formulaire from "../Components/Formulaire/Formulaire";
+import ContactMods from "../Components/Formulaire/ContactMod";
 
 function Contact() {
   return (
-    <div className="Contact">
-      <h2 className="Contact__title">Contact :</h2>
-      <form className="Contact__form"></form>
+    <div className="contact">
+      <div className="contact__item">
+        <Formulaire />
+        <ContactMods />
+      </div>
     </div>
   );
 }

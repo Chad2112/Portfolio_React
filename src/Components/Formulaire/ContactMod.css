@@ -1,0 +1,36 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 200px;
+    background-color: rgb(110 179 255);
+    border-radius: 25px;
+}
+
+.card__content__contact {
+    width: 90%;
+    height: 84%;
+    background-color: rgb(21 42 92 / 59%);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card__content__icon {
+    font-size: 30px;
+}
+
+.card__content__mail {
+    display: flex;
+    justify-content: space-evenly;
+    width: 98%;
+}
