@@ -18,9 +18,9 @@ root.render(
       <Header></Header>
       <Routes>
         <Route path="/Portfolio_React" element={<Home />}></Route>
-        <Route path="/Projets" element={<Projets />}></Route>
-        <Route path="/CV" element={<CV />}></Route>
-        <Route path="/Contact" element={<Contact />}></Route>
+        <Route path="/Portfolio_React/Projets" element={<Projets />}></Route>
+        <Route path="/Portfolio_React/CV" element={<CV />}></Route>
+        <Route path="/Portfolio_React/Contact" element={<Contact />}></Route>
       </Routes>
     </Router>
   </React.StrictMode>

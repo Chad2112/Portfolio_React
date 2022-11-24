@@ -11,7 +11,7 @@ function SlideMenu() {
 
   const location = useLocation().pathname;
   useEffect(() => {
-    if (location === "/") {
+    if (location === "/Portfolio_React") {
       setHome(true);
     } else {
       setHome(false);
@@ -20,16 +20,16 @@ function SlideMenu() {
 
   return HomeActive ? (
     <div className="slideMenu__content--home">
-      <Link className="slideMenu__content__list__link--home" to="/">
+      <Link className="slideMenu__content__list__link--home" to="/Portfolio_React">
         Acceuil
       </Link>
-      <Link className="slideMenu__content__list__link--home" to="/Projets">
+      <Link className="slideMenu__content__list__link--home" to="/Portfolio_React/Projets">
         Projets
       </Link>
-      <Link className="slideMenu__content__list__link--home" to="/CV">
+      <Link className="slideMenu__content__list__link--home" to="/Portfolio_React/CV">
         Curriculum vitae
       </Link>
-      <Link className="slideMenu__content__list__link--home" to="/Contact">
+      <Link className="slideMenu__content__list__link--home" to="/Portfolio_React/Contact">
         Contact
       </Link>
     </div>
@@ -38,16 +38,16 @@ function SlideMenu() {
       <div className="slideMenu__blur"></div>
       <div className="slideMenu__box__text"></div>
       <div className="slideMenu__content">
-        <Link className="slideMenu__content__list__link" to="/">
+        <Link className="slideMenu__content__list__link" to="/Portfolio_React">
           Acceuil
         </Link>
-        <Link className="slideMenu__content__list__link" to="/Projets">
+        <Link className="slideMenu__content__list__link" to="/Portfolio_React/Projets">
           Projets
         </Link>
-        <Link className="slideMenu__content__list__link" to="/CV">
+        <Link className="slideMenu__content__list__link" to="/Portfolio_React/CV">
           Curriculum vitae
         </Link>
-        <Link className="slideMenu__content__list__link" to="/Contact">
+        <Link className="slideMenu__content__list__link" to="/Portfolio_React/Contact">
           Contact
         </Link>
       </div>

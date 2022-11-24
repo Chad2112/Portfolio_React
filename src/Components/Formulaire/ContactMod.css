@@ -34,3 +34,8 @@
     justify-content: space-evenly;
     width: 98%;
 }
+
+.card__content__mail a,
+.card__content__tel a {
+    color: #f7ff04;
+}

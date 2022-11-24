@@ -20,7 +20,7 @@ function ContactMods() {
           <FontAwesomeIcon className="card__content__icon" icon={faPhone} />
           <div className="card__content__tel">
             <span>Telephone : </span>
-            <a href="tel:+33601756466">0601756466</a>
+            <a href="tel:+33601756466">06 01 75 64 66</a>
           </div>
         </div>
       </div>

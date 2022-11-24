@@ -1,6 +1,6 @@
 .header {
     height: 250px;
-    width: 87%;
+    width: 90%;
     position: relative;
 
 }
@@ -40,6 +40,16 @@
     right: 27%;
     color: white;
     top: 40%;
+    font-size: 59px;
+    /* background-color: white; */
+    z-index: 1000;
+}
+
+.header__name--projets {
+    position: absolute;
+    right: 40%;
+    color: white;
+    top: 38%;
     font-size: 59px;
     /* background-color: white; */
     z-index: 1000;

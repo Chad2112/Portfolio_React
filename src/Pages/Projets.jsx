@@ -1,5 +1,7 @@
+import Carroussel from "../Components/Projets/Carroussel";
+
 function Projets() {
-  return;
+  return <Carroussel />;
 }
 
 export default Projets;
