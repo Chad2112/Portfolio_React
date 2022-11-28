@@ -11,7 +11,7 @@ function SlideMenu() {
 
   const location = useLocation().pathname;
   useEffect(() => {
-    if (location === "/Portfolio_React/") {
+    if (location === "/Portfolio_React/CV" || location === "/Portfolio_React/Contact" || location === "/Portfolio_React/Projets") {
       setHome(true);
     } else {
       setHome(false);
@@ -19,37 +19,39 @@ function SlideMenu() {
   }, [location]);
 
   return HomeActive ? (
-    <div className="slideMenu__content--home"></div>
-  ) : open ? (
-    <nav className="slideMenu">
-      <div className="slideMenu__blur"></div>
-      <div className="slideMenu__box__text"></div>
-      <div className="slideMenu__content">
-        <Link className="slideMenu__content__list__link" to="/Portfolio_React">
-          Acceuil
-        </Link>
-        <Link className="slideMenu__content__list__link" to="/Portfolio_React/Projets">
-          Projets
-        </Link>
-        <Link className="slideMenu__content__list__link" to="/Portfolio_React/CV">
-          Curriculum vitae
-        </Link>
-        <Link className="slideMenu__content__list__link" to="/Portfolio_React/Contact">
-          Contact
-        </Link>
-      </div>
-      <button className="slideMenu__box__close" onClick={() => setOpen(false)}>
-        <FontAwesomeIcon className="Arrow__left" icon={faCircleArrowLeft} />
-      </button>
-    </nav>
-  ) : (
-    <div className="slideMenu">
-      <div className="slideMenu__box__icon">
-        <button className="slideMenu__box__open" onClick={() => setOpen(true)}>
-          <FontAwesomeIcon icon={faBars} />
+    open ? (
+      <nav className="slideMenu">
+        <div className="slideMenu__blur"></div>
+        <div className="slideMenu__box__text"></div>
+        <div className="slideMenu__content">
+          <Link className="slideMenu__content__list__link" to="/Portfolio_React">
+            Acceuil
+          </Link>
+          <Link className="slideMenu__content__list__link" to="/Portfolio_React/Projets">
+            Projets
+          </Link>
+          <Link className="slideMenu__content__list__link" to="/Portfolio_React/CV">
+            Curriculum vitae
+          </Link>
+          <Link className="slideMenu__content__list__link" to="/Portfolio_React/Contact">
+            Contact
+          </Link>
+        </div>
+        <button className="slideMenu__box__close" onClick={() => setOpen(false)}>
+          <FontAwesomeIcon className="Arrow__left" icon={faCircleArrowLeft} />
         </button>
+      </nav>
+    ) : (
+      <div className="slideMenu">
+        <div className="slideMenu__box__icon">
+          <button className="slideMenu__box__open" onClick={() => setOpen(true)}>
+            <FontAwesomeIcon icon={faBars} />
+          </button>
+        </div>
       </div>
-    </div>
+    )
+  ) : (
+    <div className="slideMenu__content--home"></div>
   );
 }
 
