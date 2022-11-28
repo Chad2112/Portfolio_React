@@ -22,6 +22,10 @@ textarea {
     padding: 30px;
 }
 
+.contact__form p {
+    color: red;
+}
+
 .contact__form__btn {
     width: 441px;
     color: white;

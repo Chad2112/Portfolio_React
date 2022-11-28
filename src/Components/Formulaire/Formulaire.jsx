@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./Formulaire.css";
-import { validName, validEmail } from "./Regex";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Link, useNavigate } from "react-router-dom";
@@ -9,12 +8,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 function Formulaire() {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [emailErr, setEmailErr] = useState(false);
-  const [nameError, setNameError] = useState(false);
   const navigate = useNavigate();
-  const form = useRef();
 
   const schema = yup
     .object({
@@ -30,26 +24,6 @@ function Formulaire() {
   } = useForm({
     resolver: yupResolver(schema),
   });
-
-  // function handleClick() {
-  //   navigate("/Portfolio_React/CV");
-  // }
-
-  // const sendEmail = (e) => {
-  //   if (!validEmail.test(email)) {
-  //     setEmailErr(true);
-  //     e.preventDefault();
-  //   } else if (!validName.test(name)) {
-  //     setNameError(true);
-  //     e.preventDefault();
-  //   }
-  //   try {
-  //     // document.location.href = "https://www.google.com/";
-  //     emailjs.sendForm("service_8q4tss8", "template_w7ni96c", form.current, "hOr4zr0VWjsMH43QZ")(e.target.reset());
-  //   } finally {
-  //     navigate("/Portfolio_React/Contact");
-  //   }
-  // };
 
   const onSubmit = (data, r) => {
     alert("Votre message a bien été envoyer !");
@@ -67,6 +41,7 @@ function Formulaire() {
       .send(serviceId, templateId, variables, "hOr4zr0VWjsMH43QZ")
       .then((res) => {
         console.log("succes");
+        navigate("/Portfolio_React");
       })
       .catch((err) => {
         console.error("il y a une erreur");
@@ -75,26 +50,12 @@ function Formulaire() {
 
   return (
     <form className="contact__form" onSubmit={handleSubmit(onSubmit)}>
-      <input
-        type="text"
-        name="name"
-        id="name"
-        placeholder="Votre nom / nom de l'entreprise"
-        {...register("name")}
-        // onChange={(e) => setName(e.target.value)}
-      />
-      {errors.name && <p id="r-Name">{errors.name.message}</p>}
-      <input
-        type="text"
-        id="email"
-        name="email"
-        placeholder="Votre email"
-        {...register("email")}
-        // onChange={(e) => setEmail(e.target.value)}
-      />
-      {errors.email && <p id="r-email">{errors.email.message}</p>}
+      <input type="text" name="name" id="name" placeholder="Votre nom / nom de l'entreprise" {...register("name")} />
+      {errors.name && <p>{errors.name.message}</p>}
+      <input type="text" id="email" name="email" placeholder="Votre email" {...register("email")} />
+      {errors.email && <p>{errors.email.message}</p>}
       <textarea name="message" rows="7" placeholder="Votre message" {...register("message")}></textarea>
-      {errors.message && <p id="r-message">{errors.message.message}</p>}
+      {errors.message && <p>{errors.message.message}</p>}
       <button type="submit" className="contact__form__btn" value="Envoyer">
         Envoyer
       </button>
