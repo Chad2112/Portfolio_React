@@ -23,7 +23,6 @@ root.render(
         <Route path="/Portfolio_React/CV" element={<CV />}></Route>
         <Route path="/Portfolio_React/Contact" element={<Contact />}></Route>
         <Route path="/Portfolio_React/" element={<Navigate to="/Portfolio_React" />} />
-        <Route path="/Portfolio_React/*" element={<Navigate to="/Portfolio_React" />} />
       </Routes>
     </Router>
   </React.StrictMode>
