@@ -19,20 +19,7 @@ function SlideMenu() {
   }, [location]);
 
   return HomeActive ? (
-    <div className="slideMenu__content--home">
-      <Link className="slideMenu__content__list__link--home" to="/Portfolio_React">
-        Acceuil
-      </Link>
-      <Link className="slideMenu__content__list__link--home" to="/Portfolio_React/Projets">
-        Projets
-      </Link>
-      <Link className="slideMenu__content__list__link--home" to="/Portfolio_React/CV">
-        Curriculum vitae
-      </Link>
-      <Link className="slideMenu__content__list__link--home" to="/Portfolio_React/Contact">
-        Contact
-      </Link>
-    </div>
+    <div className="slideMenu__content--home"></div>
   ) : open ? (
     <nav className="slideMenu">
       <div className="slideMenu__blur"></div>
