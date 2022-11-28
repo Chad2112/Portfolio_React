@@ -3,13 +3,19 @@ import "./Formulaire.css";
 import { validName, validEmail } from "./Regex";
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
+import { Link, useNavigate } from "react-router-dom";
 
 function Formulaire() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [emailErr, setEmailErr] = useState(false);
   const [nameError, setNameError] = useState(false);
+  const navigate = useNavigate();
   const form = useRef();
+
+  // function handleClick() {
+  //   navigate("/Portfolio_React/CV");
+  // }
 
   const sendEmail = (e) => {
     if (!validEmail.test(email)) {
@@ -18,8 +24,12 @@ function Formulaire() {
     } else if (!validName.test(name)) {
       setNameError(true);
       e.preventDefault();
-    } else {
-      emailjs.sendForm("service_8q4tss8", "template_w7ni96c", form.current, "hOr4zr0VWjsMH43QZ").then(e.target.reset());
+    }
+    try {
+      // document.location.href = "https://www.google.com/";
+      emailjs.sendForm("service_8q4tss8", "template_w7ni96c", form.current, "hOr4zr0VWjsMH43QZ")(e.target.reset());
+    } finally {
+      navigate("https://chad2112.github.io/Portfolio_React/Contact");
     }
   };
 
