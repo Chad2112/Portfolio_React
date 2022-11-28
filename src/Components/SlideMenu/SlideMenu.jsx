@@ -11,7 +11,7 @@ function SlideMenu() {
 
   const location = useLocation().pathname;
   useEffect(() => {
-    if (location === "/Portfolio_React") {
+    if (location === "/Portfolio_React/") {
       setHome(true);
     } else {
       setHome(false);
